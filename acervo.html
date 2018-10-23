@@ -1,27 +1,14 @@
 <html>
 <head>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #06d6a0">
-      <a class="navbar-brand" href="index.html">
-          <img src="img/logo.png" alt="logo" height="100px">
-          TCCsTANDO
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="dicas.html">Dicas & Infos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="modelo.html">Modelos de TCC</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="relatos.html">Relatos & Experiências</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <meta charset="utf-8">
+
+	<title>Responsive Header Nav</title>
+
+	<meta name="description" content="Responsive Header Nav">
+
+	<meta name="author" content="Treehouse">
+
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,10 +27,199 @@
      background-color: #52489c0;
      width: 100%;
 }
+
+/*RESET*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+
+/*MAIN*/
+body { 
+	font-size: 1.05em;
+	line-height: 1.25em;
+	font-family: Helvetica Neue, Helvetica, Arial;
+	background: #f9f9f9;
+	color: #555;
+}
+
+a {
+
+	color: #4C9CF1;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+a:hover {
+
+	color: #444;
+
+}
+
+img {
+
+	width: 100%;
+
+}
+
+header {
+
+	background: #fff;
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid #4C9CF1;
+	z-index: 100;
+
+}
+
+#logo{
+
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 40px;
+	background: url(../img/logo.png) no-repeat center;
+	display: block;
+
+}
+
+nav {
+
+	float: right;
+	padding: 20px;	
+	
+}
+
+#menu-icon {
+
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #4C8FEC url(../img/menu-icon.png) center;
+
+}
+
+a:hover#menu-icon {
+
+	background-color: #444;
+	border-radius: 4px 4px 0 0;
+
+}
+
+ul {
+
+	list-style: none;
+
+}
+
+li {
+
+	display: inline-block;
+	float: left;
+	padding: 10px
+
+}
+
+.current {
+
+	color: #2262AD;
+
+}
+
+section {
+
+	margin: 80px auto 40px;
+	max-width: 980px;
+	position: relative;
+	padding: 20px
+
+}
+
+h1 {
+
+	font-size: 2em;
+	color: #2262AD;
+	line-height: 1.15em;
+	margin: 20px 0 ;
+
+}
+
+p {
+
+	line-height: 1.45em;
+	margin-bottom: 20px;
+
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
+
+	header {
+
+		position: absolute;
+
+	}
+
+	#menu-icon {
+
+		display:inline-block;
+
+	}
+
+	nav ul, nav:active ul { 
+
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+
+	}
+
+	nav li {
+
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+
+	}
+
+	nav:hover ul {
+
+		display: block;
+
+	}
 </style>
 </head>
 
 <body>
+		<header>
+
+		<a href="#" id="logo"></a>
+
+		<nav>
+
+			<a href="#" id="menu-icon"></a>
+
+			<ul>
+
+				<li><a href="#" class="current">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Work</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+
+			</ul>
+
+		</nav>
+
+	</header>
   	<main>
       <!-- Jumbotron!-->
       <div class="row mt-3"> 
