@@ -8,10 +8,6 @@ $select = mysqli_query($connect, $query_select); /**selecionando**/
 $array = mysqli_fetch_array($select);
 $logarray = $array['login'];
  
-  if($login == "" || $login == null || $senha == "" || $senha == null ) /**caso algum campo esteja nulo ou em branco, vai mostrar essa mensagem, isso é bom pq n vai ter nada em branco**/{ 
-    echo"<script language='javascript' type='text/javascript'>alert('Um campo deve ser preenchido');window.location.href='cadastro.html';</script>";
- 
-    }else{
       if($logarray == $login){ 
  
         echo"<script language='javascript' type='text/javascript'>alert('Esse login já existe');window.location.href='cadastro.html';</script>"; /** se já tiver um usuario cadastrado com o mesmo login, ele vai avisar q já existe e depois voltar para a página de cadastro**/
@@ -28,5 +24,4 @@ $logarray = $array['login'];
           echo"<script language='javascript' type='text/javascript'>alert('Não foi possível cadastrar esse usuário');window.location.href='cadastro.html'</script>"; /** caso deu algum erro no banco, vai mostrar essa mensagem**/
         }
       }
-    }
 ?>
